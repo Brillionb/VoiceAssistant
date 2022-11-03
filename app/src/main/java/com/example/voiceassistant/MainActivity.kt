@@ -8,22 +8,22 @@ import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
-    val tag : String = "MainActivity"
-
+    val tag: String = "MainActivity"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var age : Int = 43
-        var height : Double = 163.0
-        val name : String = "Galina"
-        val surname : String = "Magazinova"
+        var age: Int = 37
+        var height: Double = 172.2
+        val name: String = "Ivan"
+        val surname: String = "Ivanov"
 
-       val summary : String = "my name: " + name + " surname: " + surname + " " + age + " years " + height + " cm !"
+        val summary: String =
+            "name: $name surname: $surname age: $age height: $height"
 
-        val output : TextView = findViewById(R.id.output)
+        val output: TextView = findViewById(R.id.output)
         output.text = summary
 
         Log.d(tag, summary)
