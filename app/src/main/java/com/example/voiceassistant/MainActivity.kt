@@ -208,7 +208,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == VOICE_RECOGNITION_REQUEST_CODE && requestCode == RESULT_OK){
+        if (requestCode == VOICE_RECOGNITION_REQUEST_CODE && resultCode == RESULT_OK){
             data?.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS)?.get(0)?.let{question ->
                 requestInput.setText(question)
                 askWolfram(question)
